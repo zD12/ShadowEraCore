@@ -24,6 +24,9 @@ public ShadowEra plugin;
         getCommand("fakeleave").setExecutor((org.bukkit.command.CommandExecutor) new Command_fakeleave(this));
         getCommand("consolesay").setExecutor((org.bukkit.command.CommandExecutor) new Command_consolesay(this));
         getCommand("machat").setExecutor((org.bukkit.command.CommandExecutor) new Command_machat(this));
+        getCommand("vj").setExecutor((org.bukkit.CommandExecutor) new Command_vj(this));
+        
+        new PlayerListener(this);
        
      }
      
