@@ -26,7 +26,7 @@ public class Command_announce implements CommandExecutor {
        }
         String message = StringUtils.join(args, " ");
         
-        Bukkit.broadcastMessage(ChatColor.GRAY + "[" + ChatColor.DARK_RED + "Announcement by " + player.getName() + ChatColor.GRAY + "] " + message);
+        Bukkit.broadcastMessage(ChatColor.LIGHT_PURPLE + "[Server: "  + player.getName() + " ] " + message);
         return false;
 
     }
