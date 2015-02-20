@@ -47,7 +47,7 @@ public class PlayerListener implements Listener
                 {
                     case DIAMOND_AXE:
                     {
-                        if (player.hasPermission("vjshadowera.event.thor"))
+                        if (player.hasPermission("shadoweracore.event.thor"))
                         {
                             for (int i = 0; i <= 100; i++)
                             {
