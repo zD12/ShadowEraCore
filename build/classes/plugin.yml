@@ -1,0 +1,38 @@
+name: ShadowEraCore
+main: me.BrandonSteed.ShadowEra.ShadowEra
+version: v1.3
+author: GeneralOfGames
+
+commands:
+    rage:
+        description: Rage in FIRE!
+    
+    administratemode:
+        description: Administrator Command - Administrate the server!
+        
+        
+    announce:
+        description: Administrator Command - Announce to the server!
+        
+    pl:
+        description: Check out what plugins we use!
+       
+    slime:
+        description: Is the owner online?    
+        
+    promote:
+        description: Owner Command - Promote a player! 
+        
+    nv:
+        description: Living the "Light" Life       
+        
+    fakeleave:
+        description: Pow! Gone like magic!!   
+     
+    consolesay:
+        description: Scream a message from console.  
+        
+    machat:
+        description: Make a player say something!    
+                
+        
