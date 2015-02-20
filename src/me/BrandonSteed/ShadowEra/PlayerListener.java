@@ -50,7 +50,7 @@ public class PlayerListener implements Listener
             {
                 switch (event.getMaterial())
                 {
-                    
+                    // none yet
                 }
             }
         }
