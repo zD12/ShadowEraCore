@@ -1,38 +1,105 @@
 name: ShadowEraCore
 main: me.BrandonSteed.ShadowEra.ShadowEra
-version: v1.3
-author: GeneralOfGames
-
+version: 3.0
+authors: [GeneralOfGames, VjGamingUK2000]
 commands:
-    rage:
-        description: Rage in FIRE!
-    
-    administratemode:
-        description: Administrator Command - Administrate the server!
-        
-        
-    announce:
-        description: Administrator Command - Announce to the server!
-        
-    pl:
-        description: Check out what plugins we use!
-       
-    slime:
-        description: Is the owner online?    
-        
-    promote:
-        description: Owner Command - Promote a player! 
-        
-    nv:
-        description: Living the "Light" Life       
-        
-    fakeleave:
-        description: Pow! Gone like magic!!   
-     
-    consolesay:
-        description: Scream a message from console.  
-        
-    machat:
-        description: Make a player say something!    
-                
-        
+  rage:
+    description: Rage in FIRE!
+    usage: /<command>
+    permission: shadoweracore.command.rage
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+  administratemode:
+    description: Administrator Command - Administrate the server! 
+    usage: /<command> [on | off]
+    aliases: [admin, adminmode]
+    permission: shadoweracore.command.administratemode
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+  announce:
+    description: Administrator Command - Announce to the server!   
+    usage: /<command> [message]
+    permission: shadoweracore.command.announce
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+  pl:
+    description: Check out what plugins we use! 
+    usage: /<command>
+  slime:
+    description: Is the owner online?  
+    usage: /<command>
+    aliases: [owner]
+  promote:
+    description: Owner Command - Promote a player!   
+    usage: /<command> <player> [helper | moderator | admin | coowner | developer]
+    permission: shadoweracore.command.promote
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+  nv:
+    description: Living the "Light" Life   
+    usage: /<command> [on | off]
+    permission: shadoweracore.command.nv
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+  fakeleave:
+    description: Pow! Gone like magic!!   
+    usage: /<command>
+    permission: shadoweracore.command.fakeleave
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+  consolesay:
+    description: Scream a message from console.    
+    usage: /<command> [message]
+    aliases: [server]
+    permission: shadoweracore.command.consolesay
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+  machat:
+    description: Make a player say something!  
+    usage: /<command> <player> [message]
+    permission: shadoweracore.command.machat
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+  vj:
+    description: Slam the VJHammer over someone.
+    usage: /<command> <player>
+    permission: shadoweracore.command.vj
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+permissions:
+  shadoweracore.*:
+    description: Gives access to everything on ShadowEraCore.
+    children:
+      shadoweracore.command.rage: true
+      shadoweracore.command.administratemode: true
+      shadoweracore.command.announce: true
+      shadoweracore.command.promote: true
+      shadoweracore.command.nv: true
+      shadoweracore.command.fakeleave: true
+      shadoweracore.command.consolesay: true
+      shadoweracore.command.machat: true
+      shadoweracore.command.vj: true
+      shadoweracore.event.thor: true
+  shadoweracore.command.*:
+    description: Gives access to all ShadowEraCore commands.
+    children:
+      shadoweracore.command.rage: true
+      shadoweracore.command.administratemode: true
+      shadoweracore.command.announce: true
+      shadoweracore.command.promote: true
+      shadoweracore.command.nv: true
+      shadoweracore.command.fakeleave: true
+      shadoweracore.command.consolesay: true
+      shadoweracore.command.machat: true
+      shadoweracore.command.vj: true
+  shadoweracore.command.rage:
+    description: Gives access to /rage
+  shadoweracore.command.administratemode:
+    description: Gives access to /administratemode
+  shadoweracore.command.announce:
+    description: Gives access to /announce
+  shadoweracore.command.promote:
+    description: Gives access to /promote
+  shadoweracore.command.nv:
+    description: Gives access to /nv
+  shadoweracore.command.fakeleave:
+    description: Gives access to /fakeleave
+  shadoweracore.command.consolesay:
+    description: Gives access to /consolesay
+  shadoweracore.command.machat:
+    description: Gives access to /machat
+  shadoweracore.command.vj:
+    description: Gives access to /vj
+  shadoweracore.event.thor:
+    description: Gives access to use the Thor Hammer.
