@@ -1,39 +1,39 @@
 package me.BrandonSteed.ShadowEra;
-
+ 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import org.bukkit.event.*;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-
+ 
 public class PlayerListener implements Listener
 {
-    public PlayerListener(ShadowEra plugin)
-    {
-        plugin.getServer().getPluginManager().registerEvents(this, plugin);
-    }
-    
-    @EventHandler
+ 
+        public ShadowEra plugin;
+       
+        public PlayerListener(ShadowEra instance){
+                plugin = instance;
+        }
+     
+ @EventHandler
     public void onPlayerChat(PlayerChatEvent event) {
         if(event.getMessage().equalsIgnoreCase("/pl") || event.getMessage().equalsIgnoreCase("/plugins") || event.getMessage().equalsIgnoreCase("/bukkit:plugins") || event.getMessage().equalsIgnoreCase("/bukkit:pl"))
-            event.getPlayer().sendMessage(ChatColor.GREEN + "This command is blocked!!");
+        event.getPlayer().sendMessage(ChatColor.GREEN + "This command is blocked!!");
         event.setCancelled(true);
 
     }
-       
-
-    @EventHandler(priority = EventPriority.HIGHEST)
+        
+        @EventHandler(priority = EventPriority.HIGHEST)
         public void onPlayerJoin(PlayerJoinEvent e)
         {
-                e.getPlayer().sendMessage(ChatColor.RED + "We are using a custom coded plugin called ShadowEraCore!");
-                e.getPlayer().sendMessage(ChatColor.RED + "All the plugins have been loaded for you!");
+                e.getPlayer().sendMessage(ChatColor.RED + "This server is using ShadowEraCore!");
+                e.getPlayer().sendMessage(ChatColor.RED + "To get the source go to github.com/GotNoFriends/ShadowEraCore");
         }
-    
-    
-    @EventHandler(priority = EventPriority.HIGH)
+      
+  @EventHandler(priority = EventPriority.HIGH)
     public void onPlayerInteract(PlayerInteractEvent event)
     {
         final Player player = event.getPlayer();
@@ -71,8 +71,10 @@ public class PlayerListener implements Listener
                 switch (event.getMaterial())
                 {
                     // none yet
-                }
+                }  
+       
             }
+        
         }
     }
 }
