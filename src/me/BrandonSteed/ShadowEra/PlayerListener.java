@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 public class PlayerListener implements Listener
 {
-    public PlayerListener(ShadowEra plugin)
+    public PlayerListener(ShadowEraCore plugin)
     {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
