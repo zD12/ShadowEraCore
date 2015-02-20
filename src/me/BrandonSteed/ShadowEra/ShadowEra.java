@@ -27,12 +27,17 @@ public ShadowEra plugin;
         getCommand("vj").setExecutor((org.bukkit.CommandExecutor) new Command_vj(this));
         
         new PlayerListener(this);
+        
+        getLogger().info("[ShadowEraCore] Plugin by Got_No_Friends and VjGamingUK2000.");
+        Bukkit.broadcastMessage(ChatColor.BLUE + "[ShadowEraCore] " + ChatColor.DARK_PURPLE + "Plugin by Got_No_Friends and VjGamingUK2000 sucessfully enabled!");
        
      }
      
      public void onDisable()
      {
-        // Logger to go here! 
+        getLogger().info("[ShadowEraCore] Plugin going to sleep...");
+        Bukkit.broadcastMessage(ChatColor.BLUE + "[ShadowEraCore] " + ChatColor.DARK_PURPLE + "Plugin going to sleep...");
+        Bukkit.broadcastMessage(ChatColor.BLUE + "[ShadowEraCore] " + ChatColor.RED + "Warning: ShadowEraCore was disabled on the ShadowEra server! Please re-enable.");
      }
 
-     }
+}
