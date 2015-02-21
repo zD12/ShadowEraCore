@@ -31,8 +31,10 @@ public class ShadowEra extends JavaPlugin {
         getCommand("promote").setExecutor((org.bukkit.command.CommandExecutor) new Command_promote(this));
         getCommand("nv").setExecutor((org.bukkit.command.CommandExecutor) new Command_nv(this));
         getCommand("fakeleave").setExecutor((org.bukkit.command.CommandExecutor) new Command_fakeleave(this));
-        getCommand("consolesay").setExecutor((org.bukkit.command.CommandExecutor) new Command_consolesay(this));
+        getCommand("serversay").setExecutor((org.bukkit.command.CommandExecutor) new Command_consolesay(this));
         getCommand("machat").setExecutor((org.bukkit.command.CommandExecutor) new Command_machat(this));
+        getCommand("csay").setExecutor((org.bukkit.command.CommandExecutor) new Command_csay(this));
+        getCommand("birthcay").setExecutor((org.bukkit.command.CommandExecutor) new Command_birthday(this));
 
         getLogger().info("[ShadowEraCore] Plugin by Got_No_Friends and VjGamingUK2000.");
         Bukkit.broadcastMessage(ChatColor.BLUE + "[ShadowEraCore] " + ChatColor.DARK_PURPLE + "Plugin by Got_No_Friends and VjGamingUK2000 sucessfully enabled!");
