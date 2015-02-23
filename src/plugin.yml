@@ -3,6 +3,11 @@ main: me.BrandonSteed.ShadowEra.ShadowEra
 version: 4.2
 authors: [GeneralOfGames, VjGamingUK2000]
 commands:
+  fuck:
+    description: Sic the Fuckhammer on people!
+    usage: /<command> <player>
+    permission: shadoweracore.command.fuck
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   cc:
     description: Clear the chat or optionally clear someone elses.
     usage: /<command> <player>
