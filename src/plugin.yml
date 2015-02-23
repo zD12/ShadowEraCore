@@ -4,8 +4,8 @@ version: 4.2
 authors: [GeneralOfGames, VjGamingUK2000]
 commands:
   cc:
-    description: Clear the chat.
-    usage: /<command>
+    description: Clear the chat or optionally clear someone elses.
+    usage: /<command> <player>
     aliases: [clearchat, cchat]
     permission: shadoweracore.command.cc
     permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
