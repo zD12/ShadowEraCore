@@ -3,6 +3,12 @@ main: me.BrandonSteed.ShadowEra.ShadowEra
 version: 3.0
 authors: [GeneralOfGames, VjGamingUK2000]
 commands:
+  cc:
+    description: Clear the chat.
+    usage: /<command>
+    aliases: [clearchat, cchat]
+    permission: shadoweracore.command.cc
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   rage:
     description: Rage in FIRE!
     usage: /<command>
