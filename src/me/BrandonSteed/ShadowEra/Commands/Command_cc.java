@@ -64,8 +64,8 @@ public class Command_cc implements CommandExecutor
         }
         else
         {
-          sender.sendMessage(ChatColor.WHITE + "/cc:" + ChatColor.YELLOW + "Clear the entire server's chat.");
-          sender.sendMessage(ChatColor.WHITE + "/cc <player>: " + ChatColor.YELLOW + "Clear someone's chat.");
+          sender.sendMessage(ChatColor.YELLOW + "/cc:" + ChatColor.WHITE + "Clear the entire server's chat.");
+          sender.sendMessage(ChatColor.YELLOW + "/cc <player>: " + ChatColor.WHITE + "Clear someone's chat.");
         }
         
         return true;
