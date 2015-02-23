@@ -6,6 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.Sound;
 
 public class Command_cc implements CommandExecutor
 {
@@ -21,20 +22,54 @@ public class Command_cc implements CommandExecutor
   {
     if (sender.hasPermission("shadoweracore.command.cc") && sender instanceof Player)
     {
-      Player player = (Player) sender;
+      int length = args.length;
       
-      for (final Player p : Bukkit.getOnlinePlayers())
+      if (length == 0)
       {
-        p.playSound(player.getLocation(), Sound.FIREWORK_BLAST, 1, 1);
+        for (Player p : Bukkit.getOnlinePlayers())
+        {
+          p.playSound(p.getLocation(), Sound.FIREWORK_BLAST, 1, 1);
+        }
+        
+        for (int i = 0; i <= 100; i++)
+        {
+          Bukkit.broadcastMessage("");
+        }
+        Bukkit.broadcastMessage(ChatColor.DARK_PURPLE + "Chat cleared by " + sender.getName() + ".");
       }
       
-      for (int i = 0; i <= 100; i++)
+      if (length == 1)
       {
-        Bukkit.broadcastMessage("");
+        boolean playerFound = false;
+        
+        for (Player playerToClear : Bukkit.getServer().getOnlinePlayers())
+        {
+          if (playerToClear.getName().equalsIgnoreCase(args[0]))
+          {
+            for (int i = 0; i <= 100; i++)
+            {
+              playerToClear.sendMessage("");
+            }
+            playerToClear.sendMessage(ChatColor.DARK_PURPLE + "Your chat was cleared by " + sender.getName() + ".");
+            playerToClear.playSound(playerToClear.getLocation(), Sound.FIREWORK_BLAST, 1, 1);
+            sender.sendMessage(ChatColor.DARK_PURPLE + "Cleared " + playerToClear.getName() + "'s chat.");
+            playFound = true;
+            break;
+          }
+        }
+        
+        if (playerFound == false)
+        {
+          sender.sendMessage(ChatColor.DARK_RED + "Error: " + ChatColor.RED + "Couldn't find " + args[0] + ".");
+        }
+        else
+        {
+          sender.sendMessage(ChatColor.WHITE + "/cc:" + ChatColor.YELLOW + "Clear the entire server's chat.");
+          sender.sendMessage(ChatColor.WHITE + "/cc <player>: " + ChatColor.YELLOW + "Clear someone's chat.");
+        }
+        
+        return true;
       }
-      Bukkit.broadcastMessage(ChatColor.DARK_PURPLE + "Chat cleared by " + sender.getName() + ".");
-      
-      return true;
     }
     
     return true;
