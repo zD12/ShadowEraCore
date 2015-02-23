@@ -1,6 +1,6 @@
 name: ShadowEraCore
 main: me.BrandonSteed.ShadowEra.ShadowEra
-version: 3.0
+version: 4.2
 authors: [GeneralOfGames, VjGamingUK2000]
 commands:
   cc:
