@@ -76,6 +76,7 @@ permissions:
       shadoweracore.command.consolesay: true
       shadoweracore.command.machat: true
       shadoweracore.command.vj: true
+      shadoweracore.command.cc: true
       shadoweracore.event.thor: true
   shadoweracore.command.*:
     description: Gives access to all ShadowEraCore commands.
@@ -85,10 +86,13 @@ permissions:
       shadoweracore.command.announce: true
       shadoweracore.command.promote: true
       shadoweracore.command.nv: true
+      shadoweracore.command.cc: true
       shadoweracore.command.fakeleave: true
       shadoweracore.command.consolesay: true
       shadoweracore.command.machat: true
       shadoweracore.command.vj: true
+  shadoweracore.command.cc:
+    description: Gives access to /cc
   shadoweracore.command.rage:
     description: Gives access to /rage
   shadoweracore.command.administratemode:
