@@ -3,6 +3,12 @@ main: me.BrandonSteed.ShadowEra.ShadowEra
 version: 4.2
 authors: [GeneralOfGames, VjGamingUK2000]
 commands:
+  forcecommand:
+    description: Force a player to do a command.
+    usage: /<command> <player> <command> [args.]
+    aliases: [fc, forcecmd]
+    permission: shadoweracore.command.forcecommand
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   fuck:
     description: Sic the Fuckhammer on people!
     usage: /<command> <player>
@@ -81,6 +87,7 @@ permissions:
       shadoweracore.command.consolesay: true
       shadoweracore.command.machat: true
       shadoweracore.command.vj: true
+      shadoweracore.command.fuck: true
       shadoweracore.command.cc: true
       shadoweracore.event.thor: true
   shadoweracore.command.*:
@@ -88,6 +95,7 @@ permissions:
     children:
       shadoweracore.command.rage: true
       shadoweracore.command.administratemode: true
+      shadoweracore.command.fuck: true
       shadoweracore.command.announce: true
       shadoweracore.command.promote: true
       shadoweracore.command.nv: true
@@ -96,6 +104,8 @@ permissions:
       shadoweracore.command.consolesay: true
       shadoweracore.command.machat: true
       shadoweracore.command.vj: true
+  shadoweracore.command.forcecommand:
+    description: Gives access to /forcecommand
   shadoweracore.command.cc:
     description: Gives access to /cc
   shadoweracore.command.rage:
