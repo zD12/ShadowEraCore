@@ -40,7 +40,13 @@ public class Command_promote implements CommandExecutor {
           player.chat("/manuadd " + user.getName() + " helper");
           Bukkit.broadcastMessage(ChatColor.GRAY + "[" + ChatColor.GREEN + "Staff" + ChatColor.GRAY + "] " + ChatColor.DARK_RED + player.getName() + ChatColor.GRAY  + " set " + ChatColor.DARK_RED + user.getName() + " as a helper!");
           user.sendMessage(ChatColor.GREEN + "Congrats :D");
-          }   
+          }  
+          
+          else if (args[0].equalsIgnoreCase("coowner")) {
+          player.chat("/manuadd " + user.getName() + " coowner");
+          Bukkit.broadcastMessage(ChatColor.GRAY + "[" + ChatColor.GREEN + "Staff" + ChatColor.GRAY + "] " + ChatColor.DARK_RED + player.getName() + ChatColor.GRAY  + " set " + ChatColor.DARK_RED + user.getName() + " as a Co Owner!");
+          user.sendMessage(ChatColor.GREEN + "Congrats :D");
+          } 
           
           else if (args[0].equalsIgnoreCase("moderator")) {
           player.chat("/manuadd " + user.getName() + " moderator");
