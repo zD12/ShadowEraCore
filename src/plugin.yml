@@ -3,6 +3,12 @@ main: me.BrandonSteed.ShadowEra.ShadowEra
 version: 4.2
 authors: [GeneralOfGames, VjGamingUK2000]
 commands:
+  apply:
+    description: How to apply for helper.
+    usage: /<command> [args.]
+    aliases: [fc, forcecmd]
+    permission: shadoweracore.command.apply
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   forcecommand:
     description: Force a player to do a command.
     usage: /<command> <player> <command> [args.]
