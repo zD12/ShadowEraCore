@@ -1,5 +1,6 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
+import me.BrandonSteed.ShadowEra.ShadowEra;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
