@@ -33,14 +33,14 @@ public class ShadowEra extends JavaPlugin {
         getCommand("fakeleave").setExecutor((org.bukkit.command.CommandExecutor) new Command_fakeleave(this));
         getCommand("serversay").setExecutor((org.bukkit.command.CommandExecutor) new Command_consolesay(this));
         getCommand("machat").setExecutor((org.bukkit.command.CommandExecutor) new Command_machat(this));
-        getCommand("csay").setExecutor((org.bukkit.command.CommandExecutor) new Command_csay(this));
-        getCommand("birthcay").setExecutor((org.bukkit.command.CommandExecutor) new Command_birthday(this));
+        getCommand("console").setExecutor((org.bukkit.command.CommandExecutor) new Command_console(this));
+        getCommand("birthday").setExecutor((org.bukkit.command.CommandExecutor) new Command_birthday(this));
         getCommand("cc").setExecutor((org.bukkit.command.CommandExecutor) new Command_cc(this));
         getCommand("forcecommand").setExecutor((org.bukkit.command.CommandExecutor) new Command_forcecommand(this));
         getCommand("fuck").setExecutor((org.bukkit.command.CommandExecutor) new Command_fuck(this));
         
-        getLogger().info("[ShadowEraCore] Plugin by Got_No_Friends and VjGamingUK2000.");
-        Bukkit.broadcastMessage(ChatColor.BLUE + "[ShadowEraCore] " + ChatColor.DARK_PURPLE + "Plugin by Got_No_Friends and VjGamingUK2000 sucessfully enabled!");
+        getLogger().info("[ShadowEraCore] Plugin by ShadowEra Development Team.");
+        Bukkit.broadcastMessage(ChatColor.BLUE + "[ShadowEraCore] " + ChatColor.DARK_PURPLE + "Plugin by ShadowEra Development Team sucessfully enabled!");
        
      }
      
