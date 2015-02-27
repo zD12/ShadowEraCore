@@ -9,6 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import me.BrandonSteed.ShadowEra.Listeners.PlayerListener;
 
 public class ShadowEra extends JavaPlugin {
  public PlayerListener playerListener;
