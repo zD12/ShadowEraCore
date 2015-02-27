@@ -11,11 +11,11 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import net.minecraft.util.org.apache.commons.lang3.StringUtils;
 
-public class Command_csay implements CommandExecutor {
+public class Command_console implements CommandExecutor {
 
     public ShadowEra plugin; // points to the main class
 
-    public Command_csay(ShadowEra plugin) {
+    public Command_console(ShadowEra plugin) {
         this.plugin = plugin;
     }
 
@@ -28,7 +28,7 @@ public class Command_csay implements CommandExecutor {
             
             if (args.length > 0)
             {
-                Bukkit.broadcastMessage(String.format("§7[CONSOLE]§f<§4%s§f> %s", sender.getName(), StringUtils.join(args, " ")));
+                Bukkit.broadcastMessage(String.format("§7[Console: " + sender.getName() + " §c ", StringUtils.join(args, " ")));
             }
             
         return false;
