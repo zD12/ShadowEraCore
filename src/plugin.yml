@@ -6,7 +6,7 @@ commands:
   apply:
     description: How to apply for helper.
     usage: /<command> [args.]
-    aliases: [fc, forcecmd]
+    aliases: [apply, a]
     permission: shadoweracore.command.apply
     permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   forcecommand:
