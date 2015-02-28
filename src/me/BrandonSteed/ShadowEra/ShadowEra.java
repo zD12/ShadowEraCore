@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra;
 
 import me.BrandonSteed.ShadowEra.Commands.*;
+import me.BrandonSteed.ShadowEra.Commands.NoSlash.*;
 import me.zd12.ShadowEra.Commands.*;
 import me.BrandonSteed.ShadowEra.Listeners.PlayerListener;
 import me.zd12.ShadowEra.SE_Messages;
@@ -23,7 +24,8 @@ public class ShadowEra extends JavaPlugin {
      {
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(plugin.playerListener, plugin);
-         getCommand("rage").setExecutor((org.bukkit.command.CommandExecutor) new Command_rage(this));
+        pm.registerEvents(new Command_pluginon(), this);
+        getCommand("rage").setExecutor((org.bukkit.command.CommandExecutor) new Command_rage(this));
         getCommand("announce").setExecutor((org.bukkit.command.CommandExecutor) new Command_announce(this));
         getCommand("administratemode").setExecutor((org.bukkit.command.CommandExecutor) new Command_administratemode(this));
         getCommand("slime").setExecutor((org.bukkit.command.CommandExecutor) new Command_slime(this));
