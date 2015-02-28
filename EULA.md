@@ -13,6 +13,7 @@ Definitions
 * [GotNoFriends](https://github.com/GotNoFriends)
 * [VjGamingUK](https://github.com/VjGamingUK) 
 * [theLAZYway01](https://github.com/theLAZYway01)
+* [SmokeSnake](https://github.com/SmokeSnake) 
 * [zD12](https://github.com/zD12)
 
 -
