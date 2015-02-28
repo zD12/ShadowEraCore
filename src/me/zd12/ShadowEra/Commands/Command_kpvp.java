@@ -24,7 +24,7 @@ public class Command_kpvp implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
           Player player = (Player) sender;
-          if (! (player.hasPermission("shadoweracore.command.nv"))) {
+          if (! (player.hasPermission("shadoweracore.command.kpvp"))) {
           sender.sendMessage(ChatColor.DARK_RED + "You do not have access to that command.");
           return true;
           }
