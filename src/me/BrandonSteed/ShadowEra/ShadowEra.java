@@ -46,6 +46,7 @@ public class ShadowEra extends JavaPlugin {
         getCommand("apply").setExecutor((org.bukkit.command.CommandExecutor) new Command_apply(this));
         getCommand("shelp").setExecutor((org.bukkit.command.CommandExecutor) new Command_shelp(this));
         getCommand("kpvp").setExecutor((org.bukkit.command.CommandExecutor) new Command_kpvp(this));
+        getCommand("notchsay").setExecutor((org.bukkit.command.CommandExecutor) new Command_notchsay(this));
         getCommand("associated").setExecutor((org.bukkit.command.CommandExecutor) new Command_associated(this));
         getLogger().log(Level.INFO, "{0}| Plugin by ShadowEra Development Team.");
         Bukkit.broadcastMessage(SE_Messages.TAG + ChatColor.DARK_PURPLE + "Plugin by ShadowEra Development Team sucessfully enabled!");
