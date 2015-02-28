@@ -12,21 +12,21 @@ import org.bukkit.plugin.Plugin;
 public class Command_pluginon implements Listener
 {
     @EventHandler
-    public void onPlayerChat(AsyncPlayerChatEvent event)
+    public boolean onPlayerChat(AsyncPlayerChatEvent event)
     {
         String message = event.getMessage();
         final Player p = event.getPlayer();
 
-        if (! (player.hasPermission("shadoweracore.listeners.pluginon"))) {
-          sender.sendMessage(SE_Messages.NO_PREMS);
-          return true;  // No idea how to fix this..
+        if (! (p.hasPermission("shadoweracore.listeners.pluginon"))) {
+          p.sendMessage(SE_Messages.NO_PREMS);
+          return true;
        }
         if (message.startsWith("."))
         {
             String[] args = message.split(" ");
             if (args == null)
             {
-                return;
+                return true; // Just changed it to true, may be false..  To fix later.
             }
 
             if (args[0].equalsIgnoreCase(".pluginon"))
@@ -35,7 +35,7 @@ public class Command_pluginon implements Listener
                 {
                     p.sendMessage(SE_Messages.USAGE + ".pluginon <plugin>");  // This command is 'dot' based, not actual slashes..
                     event.setCancelled(true);
-                    return;
+                    return true; // Just changed it to true, may be false..  To fix later.
                 }
                 Plugin plugin = Bukkit.getPluginManager().getPlugin(args[1]);
                 if (plugin != null)
@@ -50,5 +50,6 @@ public class Command_pluginon implements Listener
                 event.setCancelled(true);
             }
         }
+        return false;
     }
 }

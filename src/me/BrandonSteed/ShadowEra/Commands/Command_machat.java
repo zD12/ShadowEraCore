@@ -22,7 +22,7 @@ public class Command_machat implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player player = (Player) sender;
         if (! (player.hasPermission("shadoweracore.command.machat"))) {
-          sender.sendMessage(ChatColor.DARK_RED + "You do not have access to that command.");
+          sender.sendMessage(SE_Messages.NO_PREMS);
           return true;
           }
 if (args.length == 0) {
@@ -45,7 +45,7 @@ if (args.length == 0) {
           sender.sendMessage(SE_Messages.NO_PLAYER);
         } else {
           getServer().getPlayer(args[0]).chat(Say);
-          player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "ShadowEraMod" + ChatColor.DARK_GRAY + "] " + ChatColor.GOLD + "You made" + getServer().getPlayer(args[0]).getName() + " say: " + Say);
+          player.sendMessage(SE_Messages.TAG_MOD + ChatColor.GOLD + "You made" + getServer().getPlayer(args[0]).getName() + " say: " + Say);
                 }
         return false;
     }
