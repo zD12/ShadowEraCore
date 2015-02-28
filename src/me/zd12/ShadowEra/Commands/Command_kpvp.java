@@ -1,6 +1,7 @@
 package me.zd12.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -24,8 +25,13 @@ public class Command_kpvp implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
           Player player = (Player) sender;
+<<<<<<< HEAD
           if (! (player.hasPermission("shadoweracore.command.kpvp"))) {
           sender.sendMessage(ChatColor.DARK_RED + "You do not have access to that command.");
+=======
+          if (! (player.hasPermission("shadoweracore.command.nv"))) {
+          sender.sendMessage(SE_Messages.NO_PREMS);
+>>>>>>> 14e3da6d3f7c85614b40601dc8609a871bdc233f
           return true;
           }
           if (args.length == 0) {
@@ -44,6 +50,5 @@ public class Command_kpvp implements CommandExecutor {
           player.setFlying(false);
           }
         return false;
-       
     }      
 }

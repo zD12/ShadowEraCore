@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -22,17 +23,17 @@ public class Command_promote implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
           Player player = (Player) sender;
           if (! (player.hasPermission("shadoweracore.command.promote"))) {
-          sender.sendMessage(ChatColor.DARK_RED + "You do not have access to that command.");
+          sender.sendMessage(SE_Messages.NO_PREMS);
           return true;
           }
           if (args.length == 0) {
-          player.sendMessage(ChatColor.RED + "Correct Usage is: /promote <player> <helper / moderator / admin / coowner / developer / owner");
+          player.sendMessage(SE_Messages.USAGE + "/promote <player> <helper|moderator|admin|coowner|developer|owner");
           }
           
           Player user = player.getServer().getPlayer(args[0]);
           
           if (user == null) {
-                    player.sendMessage(ChatColor.RED + "Invalid Player");
+                    player.sendMessage(SE_Messages.NO_PLAYER);
                     return true;
                 }
           
@@ -54,6 +55,5 @@ public class Command_promote implements CommandExecutor {
           user.sendMessage(ChatColor.GREEN + "Congrats :D");
           } 
         return false;
-       
     }      
 }

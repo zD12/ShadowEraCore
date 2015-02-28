@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -22,21 +23,20 @@ public class Command_nv implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
           Player player = (Player) sender;
           if (! (player.hasPermission("shadoweracore.command.nv"))) {
-          sender.sendMessage(ChatColor.DARK_RED + "You do not have access to that command.");
+          sender.sendMessage(SE_Messages.NO_PREMS);
           return true;
           }
           if (args.length == 0) {
-          player.sendMessage(ChatColor.RED + "Correct Usage is: /nv <on | off>");
+          player.sendMessage(SE_Messages.USAGE + "/nv <on | off>");
           }
           
           else if (args[0].equalsIgnoreCase("on")) {
           player.addPotionEffect(new PotionEffect(PotionEffectType.NIGHT_VISION, 2000000, 1));
-          player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "ShadowEraMod" + ChatColor.DARK_GRAY + "]" + ChatColor.GOLD + " You have activated nightvision, please do /nv off to disable :D");
-          }   
-          
+          player.sendMessage(SE_Messages.TAG_MOD + ChatColor.GOLD + "You have activated nightvision, you may do '/nv off' to disable :D");
+          }
           else if (args[0].equalsIgnoreCase("off")) {
           player.chat("/heal");
-          player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "ShadowEraMod" + ChatColor.DARK_GRAY + "] " + ChatColor.GOLD + " You have disabled nightvision!");
+          player.sendMessage(SE_Messages.TAG_MOD + ChatColor.GOLD + "You have disabled nightvision!");
           } 
         return false;
        
