@@ -45,12 +45,11 @@ public class Command_birthday implements CommandExecutor {
           Bukkit.broadcastMessage(ChatColor.RED + "Its Generals birthday!!!");
           Bukkit.broadcastMessage(ChatColor.RED + "Its Generals birthday!!!");
           
-          for (Player player : Bukkit.getOnlinePlayers())
         {
            final int firstEmpty = player.getInventory().firstEmpty();
             if (firstEmpty >= 0)
             {
-                player.getInventory().setItem(firstEmpty, heldItem);
+                player.getInventory().setItem(player.getInventory().getHeldItemSlot(), new ItemStack(Material.CAKE, 1));
             } 
         }
         
@@ -60,6 +59,6 @@ public class Command_birthday implements CommandExecutor {
         heldItem.setItemMeta(heldItemMeta);
         
         return false;
+    }
 
-    }
-    }
+}

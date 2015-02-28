@@ -1,14 +1,11 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
 public class Command_apply implements CommandExecutor {
 
@@ -30,7 +27,7 @@ public class Command_apply implements CommandExecutor {
           }
           
           else if (args[0].equalsIgnoreCase("helper")) {
-          user.sendMessage(ChatColor.GREEN + "Hello! Applications are not currently open! Please try when the server announces they are open!");
+          player.sendMessage(ChatColor.GREEN + "Hi " + sender.getName() + "! Sorry, applications aren't open :c");
           }  
           
         return false;
