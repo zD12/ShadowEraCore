@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -61,7 +62,7 @@ public class Command_cc implements CommandExecutor
         
         if (playerFound == false)
         {
-          sender.sendMessage(ChatColor.DARK_RED + "Error: " + ChatColor.RED + "Couldn't find " + args[0] + ".");
+          sender.sendMessage(SE_Messages.NO_PLAYER + args[0] + ".");
         }
         else
         {
