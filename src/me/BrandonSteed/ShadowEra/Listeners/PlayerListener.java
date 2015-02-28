@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra.Listeners;
  
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,10 +21,15 @@ public class PlayerListener implements Listener
      
  @EventHandler
     public void onPlayerChat(PlayerChatEvent event) {
-        if(event.getMessage().equalsIgnoreCase("/pl") || event.getMessage().equalsIgnoreCase("/plugins") || event.getMessage().equalsIgnoreCase("/bukkit:plugins") || event.getMessage().equalsIgnoreCase("/bukkit:pl"))
+        /*if(event.getMessage().equalsIgnoreCase("/pl") || event.getMessage().equalsIgnoreCase("/plugins") || event.getMessage().equalsIgnoreCase("/bukkit:plugins") || event.getMessage().equalsIgnoreCase("/bukkit:pl"))
         event.getPlayer().sendMessage(ChatColor.GREEN + "This command is blocked!!");
+        event.setCancelled(true); */  //Enabled '/plugins'
+        if(event.getMessage().contains("fuck") || event.getMessage().equalsIgnoreCase("bitch") || event.getMessage().contains("nigg"))
+        event.getPlayer().sendMessage(SE_Messages.SWEAR);
         event.setCancelled(true);
-
+        if(event.getMessage().contains("cunt") || event.getMessage().contains("porn") || event.getMessage().contains("horny") || event.getMessage().contains("dick") || event.getMessage().contains("penis") || event.getMessage().contains("cock"))
+        event.getPlayer().sendMessage(SE_Messages.CHILDREN_FRIENDLY_PLEASE);
+        event.setCancelled(true);
     }
         
 /*        @EventHandler(priority = EventPriority.HIGHEST)
@@ -45,7 +51,7 @@ public class PlayerListener implements Listener
             {
                 switch (event.getMaterial())
                 {
-                    case DIAMOND_AXE:
+                    case GOLD_AXE:
                     {
                         if (player.hasPermission("shadoweracore.event.thor"))
                         {

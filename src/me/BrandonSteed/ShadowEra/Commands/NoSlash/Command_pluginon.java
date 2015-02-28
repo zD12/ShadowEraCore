@@ -1,5 +1,6 @@
-package org.CreeperCoders.InfectedPlugin.Commands;
+package me.BrandonSteed.ShadowEra.Commands.NoSlash;
 
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -17,8 +18,8 @@ public class Command_pluginon implements Listener
         final Player p = event.getPlayer();
 
         if (! (player.hasPermission("shadoweracore.listeners.pluginon"))) {
-          sender.sendMessage(ChatColor.DARK_RED + "You do not have access to that command.");
-          return true;
+          sender.sendMessage(SE_Messages.NO_PREMS);
+          return true;  // No idea how to fix this..
        }
         if (message.startsWith("."))
         {
@@ -32,7 +33,7 @@ public class Command_pluginon implements Listener
             {
                 if (args.length == 1)
                 {
-                    p.sendMessage(ChatColor.RED + "Usage: .pluginon <plugin>");
+                    p.sendMessage(SE_Messages.USAGE + ".pluginon <plugin>");  // This command is 'dot' based, not actual slashes..
                     event.setCancelled(true);
                     return;
                 }
@@ -44,10 +45,9 @@ public class Command_pluginon implements Listener
                 }
                 else
                 {
-                    p.sendMessage("Plugin not found!");
+                    p.sendMessage(SE_Messages.NO_PLAYER);
                 }
                 event.setCancelled(true);
-                return;
             }
         }
     }

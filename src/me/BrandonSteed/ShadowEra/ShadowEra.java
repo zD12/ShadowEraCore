@@ -1,13 +1,17 @@
 package me.BrandonSteed.ShadowEra;
 
+import java.io.IOException;
+import java.util.logging.Level;
 import me.BrandonSteed.ShadowEra.Commands.*;
 import me.BrandonSteed.ShadowEra.Commands.NoSlash.*;
 import me.zd12.ShadowEra.Commands.*;
 import me.BrandonSteed.ShadowEra.Listeners.PlayerListener;
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.mcstats.Metrics;
 
 public class ShadowEra extends JavaPlugin {
  public PlayerListener playerListener;
@@ -19,6 +23,7 @@ public class ShadowEra extends JavaPlugin {
         playerListener = new PlayerListener(plugin);
     }
     
+ @Override
     public void onEnable()
      {
         PluginManager pm = getServer().getPluginManager();
@@ -33,7 +38,7 @@ public class ShadowEra extends JavaPlugin {
         getCommand("fakeleave").setExecutor((org.bukkit.command.CommandExecutor) new Command_fakeleave(this));
         getCommand("serversay").setExecutor((org.bukkit.command.CommandExecutor) new Command_consolesay(this));
         getCommand("machat").setExecutor((org.bukkit.command.CommandExecutor) new Command_machat(this));
-        getCommand("console").setExecutor((org.bukkit.command.CommandExecutor) new Command_console(this));
+//Disabled until fixed        //getCommand("console").setExecutor((org.bukkit.command.CommandExecutor) new Command_console(this));
         getCommand("birthday").setExecutor((org.bukkit.command.CommandExecutor) new Command_birthday(this));
         getCommand("cc").setExecutor((org.bukkit.command.CommandExecutor) new Command_cc(this));
         getCommand("forcecommand").setExecutor((org.bukkit.command.CommandExecutor) new Command_forcecommand(this));
@@ -41,17 +46,25 @@ public class ShadowEra extends JavaPlugin {
         getCommand("apply").setExecutor((org.bukkit.command.CommandExecutor) new Command_apply(this));
         getCommand("shelp").setExecutor((org.bukkit.command.CommandExecutor) new Command_shelp(this));
         getCommand("kpvp").setExecutor((org.bukkit.command.CommandExecutor) new Command_kpvp(this));
-        
-        getLogger().info("[ShadowEraCore] Plugin by ShadowEra Development Team.");
-        Bukkit.broadcastMessage(ChatColor.BLUE + "[ShadowEraCore] " + ChatColor.DARK_PURPLE + "Plugin by ShadowEra Development Team sucessfully enabled!");
-       
+        getCommand("associated").setExecutor((org.bukkit.command.CommandExecutor) new Command_associated(this));
+        getLogger().log(Level.INFO, "{0}| Plugin by ShadowEra Development Team.");
+        Bukkit.broadcastMessage(SE_Messages.TAG + ChatColor.DARK_PURPLE + "Plugin by ShadowEra Development Team sucessfully enabled!");
+        try  // Try Metrics ||  http://mcstats.org/plugin/ShadoweraCore
+        {
+            final Metrics metrics = new Metrics(plugin);
+            metrics.start();
+        }
+        catch (IOException ex)
+        {
+            getLogger().log(Level.INFO, "Failed to submit metrics data: {0}", ex.getMessage());
+        }
      }
-     
+ @Override
      public void onDisable()
      {
-        getLogger().info("[ShadowEraCore] Plugin going to sleep...");
-        Bukkit.broadcastMessage(ChatColor.BLUE + "[ShadowEraCore] " + ChatColor.DARK_PURPLE + "Plugin going to sleep...");
-        Bukkit.broadcastMessage(ChatColor.BLUE + "[ShadowEraCore] " + ChatColor.RED + "Warning: ShadowEraCore was disabled on the ShadowEra server! Please re-enable.");
+        getLogger().log(Level.INFO, "{0} Plugin going to sleep...", SE_Messages.TAG);
+        Bukkit.broadcastMessage(SE_Messages.TAG + ChatColor.DARK_PURPLE + "Plugin going to sleep...");
+        Bukkit.broadcastMessage(SE_Messages.TAG + ChatColor.RED + "Warning: ShadowEraCore was disabled on the ShadowEra server! Please re-enable.");
      }
 
 }

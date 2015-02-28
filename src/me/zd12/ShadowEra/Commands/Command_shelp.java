@@ -8,6 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.Sound;
+import me.zd12.ShadowEra.SE_Messages;
 
 public class Command_shelp implements CommandExecutor
 {
@@ -26,10 +27,7 @@ public class Command_shelp implements CommandExecutor
       
       if (length == 0)
       {
-        for (Player p : Bukkit.getOnlinePlayers())
-        {
-          sender.sendMessage("Proper usage:  '/shelp user'");
-        }
+       sender.sendMessage(SE_Messages.USAGE + "'/shelp <player>'");
       }
       
       if (length == 1)

@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import net.minecraft.util.org.apache.commons.lang3.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -25,7 +26,7 @@ public class Command_forcecommand implements CommandExecutor {
       
       if (length == 0)
       {
-        sender.sendMessage(ChatColor.WHITE + "/forcecommand <player> <command> [args.]");
+        sender.sendMessage(SE_Messages.USAGE + "/forcecommand <player> <command> [args.]");
         return true;
       }
       

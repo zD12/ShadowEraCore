@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import net.minecraft.util.org.apache.commons.lang3.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -21,15 +22,12 @@ public class Command_consolesay implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player player = (Player) sender;
         if (! (player.hasPermission("shadoweracore.command.consolesay"))) {
-          sender.sendMessage(ChatColor.DARK_RED + "You do not have access to that command.");
+          sender.sendMessage(SE_Messages.NO_PREMS);
           return true;
           }
           String message = StringUtils.join(args, " ");
           Bukkit.broadcastMessage(ChatColor.LIGHT_PURPLE + "[Server] " + message);
-          player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "ShadowEraMod" + ChatColor.DARK_GRAY + "]" + ChatColor.GOLD + " You have successfully said " + message + " as console!");
-          
-        
+          player.sendMessage(SE_Messages.TAG_MOD + ChatColor.GOLD + "You have successfully said " + message + " as console!");
         return false;
-
     }
-    }
+}
