@@ -1,15 +1,12 @@
 package me.BrandonSteed.ShadowEra;
 
 import me.BrandonSteed.ShadowEra.Commands.*;
-import net.minecraft.util.org.apache.commons.lang3.StringUtils;
+import me.zd12.ShadowEra.Commands.*;
+import me.BrandonSteed.ShadowEra.Listeners.PlayerListener;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import me.BrandonSteed.ShadowEra.Listeners.PlayerListener;
 
 public class ShadowEra extends JavaPlugin {
  public PlayerListener playerListener;
@@ -40,6 +37,8 @@ public class ShadowEra extends JavaPlugin {
         getCommand("forcecommand").setExecutor((org.bukkit.command.CommandExecutor) new Command_forcecommand(this));
         getCommand("fuck").setExecutor((org.bukkit.command.CommandExecutor) new Command_fuck(this));
         getCommand("apply").setExecutor((org.bukkit.command.CommandExecutor) new Command_apply(this));
+        getCommand("shelp").setExecutor((org.bukkit.command.CommandExecutor) new Command_shelp(this));
+        getCommand("kpvp").setExecutor((org.bukkit.command.CommandExecutor) new Command_kpvp(this));
         
         getLogger().info("[ShadowEraCore] Plugin by ShadowEra Development Team.");
         Bukkit.broadcastMessage(ChatColor.BLUE + "[ShadowEraCore] " + ChatColor.DARK_PURPLE + "Plugin by ShadowEra Development Team sucessfully enabled!");
