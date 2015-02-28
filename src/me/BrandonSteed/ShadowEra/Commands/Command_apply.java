@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -19,15 +20,15 @@ public class Command_apply implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
           Player player = (Player) sender;
           if (! (player.hasPermission("shadoweracore.command.apply"))) {
-          sender.sendMessage(ChatColor.DARK_RED + "You do not have access to that command.");
+          sender.sendMessage(SE_Messages.NO_PREMS);
           return true;
           }
           if (args.length == 0) {
-          player.sendMessage(ChatColor.RED + "Correct Usage is: /promote <helper | alreadyhelper>");
+          player.sendMessage(SE_Messages.USAGE + "/promote <helper|alreadyhelper>");
           }
           
           else if (args[0].equalsIgnoreCase("helper")) {
-          player.sendMessage(ChatColor.GREEN + "Hi " + sender.getName() + "! Sorry, applications aren't open :c");
+          player.sendMessage(ChatColor.GREEN + "Hi, " + sender.getName() + "! Sorry, applications aren't open :c");
           }  
           
         return false;
