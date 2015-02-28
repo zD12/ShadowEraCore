@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -24,7 +25,7 @@ public class Command_birthday implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
           Player player = (Player) sender;
           if (! (player.hasPermission("shadoweracore.command.rage"))) {
-          sender.sendMessage(ChatColor.DARK_RED + "You do not have access to that command.");
+          sender.sendMessage(SE_Messages.NO_PREMS);
           return true;
           }
           Bukkit.broadcastMessage(ChatColor.RED + "Its Generals birthday!!!");

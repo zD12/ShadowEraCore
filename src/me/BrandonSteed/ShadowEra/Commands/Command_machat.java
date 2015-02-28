@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.Bukkit;
 import static org.bukkit.Bukkit.getServer;
 import org.bukkit.ChatColor;
@@ -16,7 +17,7 @@ public class Command_machat implements CommandExecutor {
     public Command_machat(ShadowEra plugin) {
         this.plugin = plugin;
     }
-
+    
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player player = (Player) sender;
@@ -25,9 +26,8 @@ public class Command_machat implements CommandExecutor {
           return true;
           }
 if (args.length == 0) {
-          player.sendMessage(ChatColor.RED + "Correct Usage is: /machat <player> <message>");
-          }
-                 
+          player.sendMessage(SE_Messages.USAGE + "/machat <player> <message>");
+          }        
         String Say = "";
         for (int i = 1; i <= args.length - 1; i++)
         {
@@ -41,15 +41,12 @@ if (args.length == 0) {
             sender.sendMessage(ChatColor.RED + "Don't try to machat yourself, idiot.");
             return true;
         }
-        
         if (getServer().getPlayerExact(args[0]) == null) {
-          sender.sendMessage("That player isn't online, Sorry ;(");
+          sender.sendMessage(SE_Messages.NO_PLAYER);
         } else {
           getServer().getPlayer(args[0]).chat(Say);
-          player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "ShadowEraMod" + ChatColor.DARK_GRAY + "] " + ChatColor.GOLD + "You made" + getServer().getPlayer(args[0]).getName() + " say " + Say);
+          player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "ShadowEraMod" + ChatColor.DARK_GRAY + "] " + ChatColor.GOLD + "You made" + getServer().getPlayer(args[0]).getName() + " say: " + Say);
                 }
         return false;
-
-        
     }
 }
