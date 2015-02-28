@@ -9,6 +9,11 @@ commands:
     aliases: [a]
     permission: shadoweracore.command.apply
     permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+  kpvp:
+    description: Obtain a kit for PvP.
+    usage: /<command>
+    permission: shadoweracore.command.kpvp
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   forcecommand:
     description: Force a user to preform a command.
     usage: /<command> <player> <command> [args.]
@@ -83,53 +88,8 @@ permissions:
   shadoweracore.*:
     description: Gives access to everything on ShadowEraCore.
     children:
-      shadoweracore.command.rage: true
-      shadoweracore.command.administratemode: true
-      shadoweracore.command.announce: true
-      shadoweracore.command.promote: true
-      shadoweracore.command.nv: true
-      shadoweracore.command.fakeleave: true
-      shadoweracore.command.consolesay: true
-      shadoweracore.command.machat: true
-      shadoweracore.command.vj: true
-      shadoweracore.command.fuck: true
-      shadoweracore.command.cc: true
       shadoweracore.event.thor: true
-  shadoweracore.command.*:
+      shadoweracore.command.*: true
     description: Gives access to all ShadowEraCore commands.
     children:
-      shadoweracore.command.rage: true
-      shadoweracore.command.administratemode: true
-      shadoweracore.command.fuck: true
-      shadoweracore.command.announce: true
-      shadoweracore.command.promote: true
-      shadoweracore.command.nv: true
-      shadoweracore.command.cc: true
-      shadoweracore.command.fakeleave: true
-      shadoweracore.command.consolesay: true
-      shadoweracore.command.machat: true
-      shadoweracore.command.vj: true
-  shadoweracore.command.forcecommand:
-    description: Gives access to /forcecommand
-  shadoweracore.command.cc:
-    description: Gives access to /cc
-  shadoweracore.command.rage:
-    description: Gives access to /rage
-  shadoweracore.command.administratemode:
-    description: Gives access to /administratemode
-  shadoweracore.command.announce:
-    description: Gives access to /announce
-  shadoweracore.command.promote:
-    description: Gives access to /promote
-  shadoweracore.command.nv:
-    description: Gives access to /nv
-  shadoweracore.command.fakeleave:
-    description: Gives access to /fakeleave
-  shadoweracore.command.consolesay:
-    description: Gives access to /consolesay
-  shadoweracore.command.machat:
-    description: Gives access to /machat
-  shadoweracore.command.vj:
-    description: Gives access to /vj
-  shadoweracore.event.thor:
-    description: Gives access to use the Thor Hammer.
+      shadoweracore.command.*: true
