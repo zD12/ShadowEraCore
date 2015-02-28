@@ -6,4 +6,4 @@ ShadowEraCore was officially released onto [Github](https://github.com/GotNoFrie
 
 For information regarding the license and otherwise legal information, please see [EULA.md](EULA.md) and [LICENSE.md](LICENSE.md).
 
-For information about the server visit our forums www.shadowera.boards.net
+For information about the server visit our forums http://shadowera.boards.net
