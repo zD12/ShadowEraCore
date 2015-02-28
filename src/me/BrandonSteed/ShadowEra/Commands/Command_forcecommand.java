@@ -1,23 +1,19 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
-import java.util.Arrays;
 import me.BrandonSteed.ShadowEra.ShadowEra;
-import net.minecraft.util.org.apache.commons.lang3.ArrayUtils;
 import net.minecraft.util.org.apache.commons.lang3.StringUtils;
-import org.apache.logging.log4j.core.config.plugins.Plugin;
 import org.bukkit.Bukkit;
-import static org.bukkit.Bukkit.getServer;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Command_forcecommand implements CommandExecutor;
-{
+public class Command_forcecommand implements CommandExecutor {
+
     public ShadowEra plugin; 
 
-    public Command_machat(ShadowEra plugin) 
+    public Command_forcecommand(ShadowEra plugin) 
     {
         this.plugin = plugin;
     }
@@ -39,7 +35,7 @@ public class Command_forcecommand implements CommandExecutor;
         
         for (Player player : Bukkit.getServer().getOnlinePlayers())
         {
-          if (args[0].equals(sender.getName())
+          if (args[0].equals(sender.getName()))
           {
             sender.sendMessage(ChatColor.RED + "Dumbass.");
             return true;
