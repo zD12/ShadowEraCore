@@ -1,7 +1,7 @@
 name: ShadowEraCore
 main: me.BrandonSteed.ShadowEra.ShadowEra
 version: 4.2
-authors: [GeneralOfGames, VjGamingUK2000, DaPancake]
+authors: [GeneralOfGames, VjGamingUK2000, DaPancake, zD12 ]
 commands:
   apply:
     description: How to apply for helper.
