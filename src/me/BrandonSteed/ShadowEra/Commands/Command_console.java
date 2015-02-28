@@ -7,8 +7,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 import net.minecraft.util.org.apache.commons.lang3.StringUtils;
 
 public class Command_console implements CommandExecutor {
@@ -32,7 +30,7 @@ public class Command_console implements CommandExecutor {
                 sender.sendMessage(ChatColor.DARK_RED + "null.");
             }
             
-         if (args[0].equalsIgnoreCase("say"))
+         else if (args[0].equalsIgnoreCase("say"))
             {
                 if (args.length == 1)
                 {
