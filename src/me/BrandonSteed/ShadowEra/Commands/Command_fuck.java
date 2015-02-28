@@ -78,8 +78,7 @@ public class Command_fuck implements CommandExecutor {
               Bukkit.broadcastMessage("<" + ChatColor.GOLD + "Notch" + ChatColor.WHITE + "> EVERYBODY HATES YOU, YOU STUPID FUCKING IDIOT.");
               Bukkit.broadcastMessage("<" + ChatColor.GOLD + "Notch" + ChatColor.WHITE + "> GO DIE, NO ONE WANTS YOU IN THIS WORLD. YOU TRY ANY FUNNY SHIT AGAIN...");
               Bukkit.broadcastMessage("<" + ChatColor.GOLD + "Notch" + ChatColor.WHITE + "> I WILL KILL YOUR FAMILY YOU FUCKING IDIOT.");
-              // Not fully sure if Bukkit.getIP() will display the users IP address or the servers IP address.  Regardless, it's unlikely the user knows different.
-              Bukkit.broadcastMessage("<" + ChatColor.GOLD + "Notch" + ChatColor.WHITE + "> I WILL TRACK DOWN YOUR IP, " + Bukkit.getIp() + " TO FIND WHERE YOUR HOUSE IS AND I WILL FUCKING KILL ALL MEMBERS OF YOUR FAMILY FUCKTARD!");
+              Bukkit.broadcastMessage("<" + ChatColor.GOLD + "Notch" + ChatColor.WHITE + "> I WILL TRACK DOWN YOUR IP, " + player.getAddress() + " TO FIND WHERE YOUR HOUSE IS AND I WILL FUCKING KILL ALL MEMBERS OF YOUR FAMILY FUCKTARD!");
               player.chat("I'm freaking done. Please, ban me!");                  
             }
           }.runTaskLater((Plugin) this, 3L * 20L);
@@ -114,4 +113,4 @@ public class Command_fuck implements CommandExecutor {
   }
 }
 
-// For the record, I don't approve of this command.. Very NSFW!
+// For the record, I don't approve of this command.. Very NSFW 
