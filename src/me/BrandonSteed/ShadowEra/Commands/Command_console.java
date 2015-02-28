@@ -1,4 +1,4 @@
-package me.BrandonSteed.ShadowEra.Commands;
+/*package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
 import org.bukkit.Bukkit;
@@ -66,3 +66,4 @@ public class Command_console implements CommandExecutor {
     }
     }      
 }
+*/  //Disabled until fixed
