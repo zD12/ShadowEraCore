@@ -54,7 +54,7 @@ public class Command_cc implements CommandExecutor
             playerToClear.sendMessage(ChatColor.DARK_PURPLE + "Your chat was cleared by " + sender.getName() + ".");
             playerToClear.playSound(playerToClear.getLocation(), Sound.FIREWORK_BLAST, 1, 1);
             sender.sendMessage(ChatColor.DARK_PURPLE + "Cleared " + playerToClear.getName() + "'s chat.");
-            playFound = true;
+            playerFound = true;
             break;
           }
         }
