@@ -1,6 +1,7 @@
 package me.zd12.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import me.zd12.ShadowEra.SE_Messages;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -28,7 +29,7 @@ public class Command_associated implements CommandExecutor
           sender.sendMessage(ChatColor.AQUA + "Associated servers: ");
           sender.sendMessage(ChatColor.DARK_PURPLE + "Total" + ChatColor.YELLOW + "Freedom" + ChatColor.RESET + ": play.totalfreedom.me");
           sender.sendMessage(ChatColor.DARK_BLUE + "Freedom" + ChatColor.DARK_GREEN + "OP" + ChatColor.RESET + ": fop.us.to");
-          sender.sendMessage(ChatColor.GRAY + "You may apply for an associated placement at http://git.io/xsVr");
+          sender.sendMessage(ChatColor.GRAY + "You may apply for an associated placement at " + SE_Messages.FORUMS_URL);
         }
       return true;
     }
