@@ -27,7 +27,7 @@ public class Command_announce implements CommandExecutor {
        }
         String message = StringUtils.join(args, " ");
         
-        Bukkit.broadcastMessage(SE_Messages.ANNOUNCEMENT_TAG + " ] " + message);
+         Bukkit.broadcastMessage(SE_Messages.TAG_MOD + message);
         return false;
 
     }
