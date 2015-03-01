@@ -13,6 +13,6 @@ public class SE_Messages {
    public static final String TAG = ChatColor.WHITE + "[" + ChatColor.AQUA + "Shadow" + ChatColor.GREEN + "era" + ChatColor.LIGHT_PURPLE + "Core" + ChatColor.WHITE + "] " + ChatColor.RESET;
    public static final String TAG_MOD = ChatColor.WHITE + "[" + ChatColor.AQUA + "Shadow" + ChatColor.GREEN + "era" + ChatColor.LIGHT_PURPLE + "Mod" + ChatColor.WHITE + "] " + ChatColor.RESET;
    public static final String NOTCH = "<" + ChatColor.GOLD + "Notch" + ChatColor.WHITE + "> "; 
-   public static final String ANNOUNCEMENT_TAG = ChatColor.RED + ChatColor.BOLD + "ShadowEra " + ChatColor.GREEN + ChatColor.BOLD + "> ";
+ 
    
 }
