@@ -19,11 +19,6 @@ commands:
     aliases: [fc, forcecmd]
     permission: shadoweracore.command.forcecommand
     permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
-  fuck:
-    description: Sic the fuckhammer a user!
-    usage: /<command> <player>
-    permission: shadoweracore.command.fuck
-    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   cc:
     description: Clear chat for all users, or a single user.
     usage: /<command> <player>
