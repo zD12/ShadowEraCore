@@ -1,3 +1,4 @@
+/*
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.Modules.AdminChat;
@@ -32,3 +33,4 @@ public class Command_adminchat extends BukkitCommand
         return true;        
     }    
 }
+*/
