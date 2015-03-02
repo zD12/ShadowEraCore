@@ -34,7 +34,7 @@ public class Command_administratemode extends BukkitCommand {
           player.chat("/fly");
           player.sendMessage(SE_Messages.TAG_MOD + ChatColor.GREEN + "You have disabled administration mode!");
           } 
-        return false;
+        return true;
        
     }      
 }
