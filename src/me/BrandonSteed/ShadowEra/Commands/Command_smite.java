@@ -18,7 +18,7 @@ public class Command_smite extends BukkitCommand
   {
     if (! (sender.hasPermission("shadoweracore.command.smite")))
     {
-      sender.sendMessage(ChatColor.DARK_PURPLE + "[ShadowEraCore] " + ChatColor.RED + "You don't have enough permissions.");
+      sender.sendMessage("§9[ShadowEraCore] §cYou don't have enough permissions.");
       return true;
     }
     
