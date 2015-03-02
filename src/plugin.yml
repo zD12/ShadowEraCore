@@ -2,6 +2,11 @@ name: ShadowEraCore
 main: me.BrandonSteed.ShadowEra.ShadowEra
 authors: [GeneralOfGames, VjGamingUK2000, DaPancake, zD12 ]
 commands:
+  smite:
+    description: Smite a bad player.
+    usage: /<command> <player>
+    permission: shadoweracore.command.smite
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   adminchat:
     description: Use the adminchat!
     usage: /<command> [message]
