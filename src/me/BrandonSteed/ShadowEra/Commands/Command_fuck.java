@@ -1,4 +1,4 @@
-package me.BrandonSteed.ShadowEra.Commands;
+/* package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
 import me.zd12.ShadowEra.SE_Messages;
@@ -113,5 +113,6 @@ public class Command_fuck implements CommandExecutor {
     return true;
   }
 }
-
+*/
 // For the record, I don't approve of this command.. Very NSFW! -@zD12
+// VJ you need to improve it. Make this not a command with swearing in it and make it a banning command.
