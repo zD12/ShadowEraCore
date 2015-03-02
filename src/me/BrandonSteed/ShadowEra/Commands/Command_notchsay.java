@@ -21,7 +21,7 @@ public class Command_notchsay extends BukkitCommand {
         String message = StringUtils.join(args, " ");
         
         Bukkit.broadcastMessage(SE_Messages.NOTCH + message);
-        return false;
+        return true;
 
     }
 }
