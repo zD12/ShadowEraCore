@@ -22,7 +22,7 @@ public class Command_rage extends BukkitCommand {
           player.setHealth(0);
           player.kickPlayer(ChatColor.RED + "You exploded with fiery rage!");
         
-        return false;
+        return true;
 
     }
 }
