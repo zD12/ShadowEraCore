@@ -34,6 +34,6 @@ public class Command_machat extends BukkitCommand {
           getServer().getPlayer(args[0]).chat(Say);
           player.sendMessage(SE_Messages.TAG_MOD + ChatColor.GOLD + "You made" + getServer().getPlayer(args[0]).getName() + " say: " + Say);
                 }
-        return false;
+        return true;
     }
 }
