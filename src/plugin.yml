@@ -2,6 +2,12 @@ name: ShadowEraCore
 main: me.BrandonSteed.ShadowEra.ShadowEra
 authors: [GeneralOfGames, VjGamingUK2000, DaPancake, zD12 ]
 commands:
+  adminchat:
+    description: Use the adminchat!
+    usage: /<command> [message]
+    aliases: [o, ac]
+    permission: shadoweracore.command.apply
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   apply:
     description: Explain how to obtain helper.
     usage: /<command> [args.]
