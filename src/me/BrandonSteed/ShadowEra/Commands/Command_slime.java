@@ -31,7 +31,7 @@ public class Command_slime extends BukkitCommand {
         {
 
         }
-        return false;
+        return true;
 
     }
     }
