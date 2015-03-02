@@ -52,7 +52,7 @@ public class Command_birthday extends BukkitCommand {
         heldItemMeta.setDisplayName((new StringBuilder()).append(ChatColor.WHITE).append("Generals ").append(ChatColor.DARK_GRAY).append("Birthday!").toString());
         heldItem.setItemMeta(heldItemMeta);
         
-        return false;
+        return true;
     }
 
 }
