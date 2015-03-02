@@ -1,0 +1,49 @@
+package me.BrandonSteed.ShadowEra.Commands;
+
+import me.BrandonSteed.ShadowEra.SE_Messages;
+import net.pravian.bukkitlib.command.BukkitCommand;
+import static org.bukkit.Bukkit.getServer;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
+
+public class Command_generalmanage extends BukkitCommand {
+
+    @Override
+    public boolean run(CommandSender sender, Command cmd, String label, String[] args) {
+        Player player = (Player) sender;
+          if (!sender.getName().equalsIgnoreCase("Got_No_Friends"))
+        {
+            player.sendMessage(SE_Messages.NO_PREMS);
+            return true;
+        }
+          if (args.length == 0) {
+          player.sendMessage(SE_Messages.USAGE + "/generalmanage [op|deop]");
+          }
+          
+          else if (args[0].equalsIgnoreCase("op")) {
+          if (getServer().getPlayerExact(args[0]) == null) {
+          sender.sendMessage(SE_Messages.NO_PLAYER);
+        } else {
+          getServer().getPlayer(args[0]).setOp(true);
+          player.sendMessage(SE_Messages.TAG_MOD + ChatColor.GOLD + "You made" + getServer().getPlayer(args[0]).getName() + " OP");
+          getServer().getPlayer(args[0]).sendMessage(SE_Messages.TAG_MOD + ChatColor.GOLD + "You were opped by " + sender.getName() + "!");      
+          }
+          }   
+          
+          else if (args[0].equalsIgnoreCase("deop")) {
+          if (getServer().getPlayerExact(args[0]) == null) {
+          sender.sendMessage(SE_Messages.NO_PLAYER);
+        } else {
+          getServer().getPlayer(args[0]).setOp(false);
+          player.sendMessage(SE_Messages.TAG_MOD + ChatColor.GOLD + "You removed OP from" + getServer().getPlayer(args[0]).getName() + ".");
+          getServer().getPlayer(args[0]).sendMessage(SE_Messages.TAG_MOD + ChatColor.GOLD + "You were deopped by " + sender.getName() + "!");
+          }
+          } 
+        return false;
+       
+    }      
+}
