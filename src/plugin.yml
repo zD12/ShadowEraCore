@@ -1,6 +1,5 @@
 name: ShadowEraCore
 main: me.BrandonSteed.ShadowEra.ShadowEra
-version: 4.3
 authors: [GeneralOfGames, VjGamingUK2000, DaPancake, zD12 ]
 commands:
   apply:
