@@ -1,5 +1,6 @@
 package me.BrandonSteed.ShadowEra.Listeners;
 
+import me.BrandonSteed.ShadowEra.ShadowEra;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -7,6 +8,13 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 public class ThorListener implements Listener {
+         
+         public ShadowEra plugin;
+       
+        public ThorListener(ShadowEra instance){
+                plugin = instance;
+        }
+     
           
   @EventHandler(priority = EventPriority.HIGH)
     public void onPlayerInteract(PlayerInteractEvent event)
