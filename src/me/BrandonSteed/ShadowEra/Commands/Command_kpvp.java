@@ -35,6 +35,6 @@ public class Command_kpvp extends BukkitCommand {
           player.getInventory().setHelmet(new ItemStack(Material.DIAMOND_HELMET, 1));
           player.setFlying(false);
           }
-        return false;
+        return true;
     }      
 }
