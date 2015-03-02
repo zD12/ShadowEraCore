@@ -30,7 +30,7 @@ public class Command_nv extends BukkitCommand {
           player.chat("/heal");
           player.sendMessage(SE_Messages.TAG_MOD + ChatColor.GOLD + "You have disabled nightvision!");
           } 
-        return false;
+        return true;
        
     }      
 }
