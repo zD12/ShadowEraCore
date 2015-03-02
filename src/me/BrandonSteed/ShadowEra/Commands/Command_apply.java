@@ -15,15 +15,11 @@ public class Command_apply extends BukkitCommand {
           sender.sendMessage(SE_Messages.NO_PREMS);
           return true;
           }
-          if (args.length == 0) {
-          player.sendMessage(SE_Messages.USAGE + "/promote <helper|alreadyhelper>");
-          }
-          
-          else if (args[0].equalsIgnoreCase("helper")) {
+
           player.sendMessage(ChatColor.GREEN + "Hi, " + sender.getName() + "! Sorry, applications aren't open :c");
-          }  
+
           
-        return false;
+        return true;
        
     }      
 }
