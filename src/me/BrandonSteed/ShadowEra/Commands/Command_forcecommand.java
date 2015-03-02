@@ -1,27 +1,25 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
-import me.BrandonSteed.ShadowEra.ShadowEra;
-import me.zd12.ShadowEra.SE_Messages;
+import me.BrandonSteed.ShadowEra.SE_Messages;
 import net.minecraft.util.org.apache.commons.lang3.StringUtils;
+import net.pravian.bukkitlib.command.BukkitCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Command_forcecommand implements CommandExecutor {
+public class Command_forcecommand extends BukkitCommand {
 
-    public ShadowEra plugin; 
-
-    public Command_forcecommand(ShadowEra plugin) 
-    {
-        this.plugin = plugin;
-    }
     
     @Override
-    public boolean onCommand(final CommandSender sender, Command cmd, String label, String[] args)
+    public boolean run(final CommandSender sender, Command cmd, String label, String[] args)
     {
+          Player p = (Player) sender;
+        if (! (p.hasPermission("shadoweracore.command.forcecommand"))) {
+          sender.sendMessage(SE_Messages.NO_PREMS);
+          return true;
+          }
       int length = args.length;
       
       if (length == 0)
