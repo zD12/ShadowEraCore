@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra;
 
 import me.BrandonSteed.ShadowEra.Commands.Command_shadoweracore;
+import me.BrandonSteed.ShadowEra.Listeners.JoinEvents;
 import me.BrandonSteed.ShadowEra.Listeners.PlayerListener;
 import me.BrandonSteed.ShadowEra.Listeners.ThorListener;
 import net.pravian.bukkitlib.BukkitLib;
@@ -19,6 +20,7 @@ public class ShadowEra extends BukkitPlugin
     public BukkitCommandHandler handler;
     public PlayerListener playerListener;
     public ThorListener thorHammer;
+    public JoinEvents joinEvents;
 
 
     // YAML File Information
@@ -32,6 +34,7 @@ public class ShadowEra extends BukkitPlugin
      this.handler = new BukkitCommandHandler(plugin); // Initialize the command handler
      playerListener = new PlayerListener(plugin); // PlayerListener thingy
      thorHammer = new ThorListener(plugin);
+     joinEvents = new JoinEvents(plugin);
     }
 
     @Override
@@ -41,6 +44,7 @@ public class ShadowEra extends BukkitPlugin
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(plugin.playerListener, plugin);
         pm.registerEvents(plugin.thorHammer, plugin);
+        pm.registerEvents(plugin.joinEvents, plugin);
 
         // Bukkit Lib Important Stuff
         BukkitLib.init(plugin);
