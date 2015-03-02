@@ -20,6 +20,6 @@ public class Command_fakeleave extends BukkitCommand {
           Bukkit.broadcastMessage(ChatColor.GRAY + "[" + ChatColor.GREEN + "-" + ChatColor.GRAY + "] " + player.getName());
           player.chat("/v");
           player.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "ShadowEraMod" + ChatColor.DARK_GRAY + "] " + ChatColor.GOLD + " You have successfully left the game (not really but ya know what I mean xD)");       
-        return false;
+        return true;
     }
 }
