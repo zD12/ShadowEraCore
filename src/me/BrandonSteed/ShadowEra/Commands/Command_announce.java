@@ -20,7 +20,7 @@ public class Command_announce extends BukkitCommand {
         String message = StringUtils.join(args, " ");
         
          Bukkit.broadcastMessage(SE_Messages.TAG_MOD + message);
-        return false;
+        return true;
 
     }
     }
