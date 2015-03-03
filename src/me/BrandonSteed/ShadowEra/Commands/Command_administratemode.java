@@ -1,26 +1,19 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
-import me.BrandonSteed.ShadowEra.ShadowEra;
-import me.zd12.ShadowEra.SE_Messages;
-import org.bukkit.Bukkit;
+import me.BrandonSteed.ShadowEra.SE_Messages;
+import net.pravian.bukkitlib.command.BukkitCommand;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-public class Command_administratemode implements CommandExecutor {
+public class Command_administratemode extends BukkitCommand {
 
-    public ShadowEra plugin; // points to the main class
-
-    public Command_administratemode(ShadowEra plugin) {
-        this.plugin = plugin;
-    }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    public boolean run(CommandSender sender, Command cmd, String label, String[] args) {
           Player player = (Player) sender;
           if (! (player.hasPermission("shadoweracore.command.administratemode"))) {
           sender.sendMessage(SE_Messages.NO_PREMS);
@@ -41,7 +34,7 @@ public class Command_administratemode implements CommandExecutor {
           player.chat("/fly");
           player.sendMessage(SE_Messages.TAG_MOD + ChatColor.GREEN + "You have disabled administration mode!");
           } 
-        return false;
+        return true;
        
     }      
 }

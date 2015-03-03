@@ -1,26 +1,16 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
-import me.BrandonSteed.ShadowEra.ShadowEra;
-import me.zd12.ShadowEra.SE_Messages;
+import me.BrandonSteed.ShadowEra.SE_Messages;
+import net.pravian.bukkitlib.command.BukkitCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.Sound;
 
-public class Command_cc implements CommandExecutor
-{
-  public ShadowEra plugin;
-  
-  public Command_cc(ShadowEra plugin)
-  {
-    this.plugin = plugin;
-  }
-  
-  @Override
-  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
+public class Command_cc extends BukkitCommand {
+  public boolean run(CommandSender sender, Command cmd, String label, String[] args)
   {
     if (sender.hasPermission("shadoweracore.command.cc") && sender instanceof Player)
     {

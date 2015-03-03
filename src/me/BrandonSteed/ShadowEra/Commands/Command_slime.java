@@ -1,6 +1,7 @@
 package me.BrandonSteed.ShadowEra.Commands;
 
 import me.BrandonSteed.ShadowEra.ShadowEra;
+import net.pravian.bukkitlib.command.BukkitCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -8,21 +9,15 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Command_slime implements CommandExecutor {
-
-    public ShadowEra plugin; // points to the main class
-
-    public Command_slime(ShadowEra plugin) {
-        this.plugin = plugin;
-    }
+public class Command_slime extends BukkitCommand {
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    public boolean run(CommandSender sender, Command cmd, String label, String[] args) {
            Player slime = Bukkit.getServer().getPlayer("Got_No_Friends");
            Player player = (Player) sender;
         if (slime != null)
         {
-            player.sendMessage(ChatColor.GREEN + "The owner is " + ChatColor.BLUE + "online" + ChatColor.GREEN + "!");
+            player.sendMessage(ChatColor.GREEN + "The owner is " + ChatColor.GREEN + "online" + ChatColor.GREEN + "!");
             return true;
 
         }
@@ -36,7 +31,7 @@ public class Command_slime implements CommandExecutor {
         {
 
         }
-        return false;
+        return true;
 
     }
     }

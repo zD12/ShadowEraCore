@@ -1,8 +1,18 @@
 name: ShadowEraCore
 main: me.BrandonSteed.ShadowEra.ShadowEra
-version: 4.3
-authors: [GeneralOfGames, VjGamingUK2000, DaPancake, zD12 ]
+authors: [GeneralOfGames, VjGamingUK2000, DaPancake, zD12, Prozza, Madgeek1450]
 commands:
+  smite:
+    description: Smite a bad player.
+    usage: /<command> <player>
+    permission: shadoweracore.command.smite
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
+  adminchat:
+    description: Use the adminchat!
+    usage: /<command> [message]
+    aliases: [o, ac]
+    permission: shadoweracore.command.apply
+    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   apply:
     description: Explain how to obtain helper.
     usage: /<command> [args.]
@@ -19,11 +29,6 @@ commands:
     usage: /<command> <player> <command> [args.]
     aliases: [fc, forcecmd]
     permission: shadoweracore.command.forcecommand
-    permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
-  fuck:
-    description: Sic the fuckhammer a user!
-    usage: /<command> <player>
-    permission: shadoweracore.command.fuck
     permission-message: §9[ShadowEraCore] §cYou don't have enough permissions.
   cc:
     description: Clear chat for all users, or a single user.
